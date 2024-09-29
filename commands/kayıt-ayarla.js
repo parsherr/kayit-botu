@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 const fs = require('fs');
+const config = require('../config.json');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -48,7 +49,7 @@ async function kayıtAyarla(context, durum) {
 }
 
 function sendErrorEmbed(context, errorMessage) {
-    const prefix = context.client.prefixes.get(context.guildId) || '!';
+    const prefix = context.client.prefixes.get(context.guildId) || config.prefix;
     const errorEmbed = new EmbedBuilder()
         .setColor('#ff0000')
         .setTitle('HATA')

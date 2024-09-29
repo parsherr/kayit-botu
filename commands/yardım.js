@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const fs = require('fs');
+const config = require('../config.json');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -16,7 +17,7 @@ module.exports = {
 async function sendHelpEmbed(context) {
     const data = JSON.parse(fs.readFileSync('./kayıt.json', 'utf8'));
     const guildData = data[context.guildId] || {};
-    const prefix = guildData.prefix || '!';
+    const prefix = guildData.prefix || config.prefix;
     
     const commands = [
         { name: 'kayıt', description: 'Bir kullanıcıyı kayıt eder.' },
@@ -44,6 +45,7 @@ async function sendHelpEmbed(context) {
         const embed = new EmbedBuilder()
             .setColor('#000000')
             .setTitle('Kayıt Sistemi Komutları')
+            .setImage('https://assets.audiomack.com/angie_fluffy_bootz/df979ba13d547fb61f2e6ac11a69e4a22c6a6efeaf33a6326f49346a94f20fc5.jpeg?width=1440')
             .setDescription('Aşağıdaki komutları kullanarak kayıt sistemini yönetebilirsiniz:')
             .addFields(
                 pageCommands.map(cmd => ({

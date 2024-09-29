@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 const fs = require('fs');
+const config = require('../config.json');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -42,7 +43,7 @@ async function prefixAyarla(context, newPrefix) {
 }
 
 function sendErrorEmbed(context, errorMessage) {
-    const currentPrefix = context.client.prefixes.get(context.guildId) || '!';
+    const currentPrefix = context.client.prefixes.get(context.guildId) || config.prefix;
     const errorEmbed = new EmbedBuilder()
         .setColor('#ff0000')
         .setTitle('HATA')

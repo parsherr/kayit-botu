@@ -2,6 +2,8 @@
 
 Bu proje, Discord.js v14 kullanılarak oluşturulmuş gelişmiş bir kayıt botudur. Sunucunuzda kolayca üye kayıt sistemi kurabilir ve yönetebilirsiniz.
 
+(NOT : bu bot @sadecemsi tarafından yazıldı, @parsherr tarafından geliştirildi)
+
 ## Özellikler
 
 - Discord.js v14 ile geliştirilmiş
@@ -18,7 +20,8 @@ Bu proje, Discord.js v14 kullanılarak oluşturulmuş gelişmiş bir kayıt botu
 3. `config.json` dosyasını oluşturun ve bot tokeninizi ekleyin:
    ```json
    {
-     "token": "YOUR_BOT_TOKEN_HERE"
+     "token": "YOUR_BOT_TOKEN_HERE",
+     "prefix": "PREFİXİNİZ_BURAYA"
    }
    ```
 4. `node index.js` komutu ile botu başlatın
@@ -41,17 +44,12 @@ Botun prefix'ini değiştirir.
 - Slash Komut: `/prefix <yeni-prefix>`
 - Prefix Komut: `!prefix <yeni-prefix>`
 
-## Destek
 
-Herhangi bir sorunuz veya öneriniz varsa, doğrudan benimle iletişime geçin.
+## Topluluk & Destek
 
-[![Discord Profilim](https://img.shields.io/badge/Discord-Profilim-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/657241749579759616)
+Discord sunucumuzdan diğer altyapılarımıza ulaşabilirsiniz ve destek alabilirsiniz!
 
-## Topluluk
-
-Discord sunucumuzdan diğer altyapılarımıza ulaşabilirsiniz!
-
-[![Discord Banner](https://api.weblutions.com/discord/invite/msidev/)](https://discord.gg/msidev)
+[![Discord Banner](https://api.weblutions.com/discord/invite/bdfd/)](https://discord.gg/bdfd)
 
 ## Lisans
 

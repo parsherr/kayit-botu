@@ -1,7 +1,7 @@
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
-const { token } = require('./config.json');
+const config = require('./config.json');
 
 const client = new Client({
     intents: [
@@ -81,7 +81,7 @@ client.on('interactionCreate', async interaction => {
 client.on('messageCreate', async message => {
     if (message.author.bot) return;
 
-    let prefix = client.prefixes.get(message.guildId) || '!';
+    let prefix = client.prefixes.get(message.guildId) || config.prefix;
     if (!message.content.startsWith(prefix)) return;
 
     const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -98,4 +98,4 @@ client.on('messageCreate', async message => {
     }
 });
 
-client.login(token);
+client.login(config.token);
