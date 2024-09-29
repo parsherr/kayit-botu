@@ -45,7 +45,7 @@ async function sendHelpEmbed(context) {
         const embed = new EmbedBuilder()
             .setColor('#000000')
             .setTitle('Kayıt Sistemi Komutları')
-            .setImage('https://assets.audiomack.com/angie_fluffy_bootz/df979ba13d547fb61f2e6ac11a69e4a22c6a6efeaf33a6326f49346a94f20fc5.jpeg?width=1440')
+            .setImage('https://media.discordapp.net/attachments/1087824262322212975/1115390850248229014/standard_12.gif?ex=66fa6e6d&is=66f91ced&hm=f1a148a23b1baa6996497bff389acf278e691b78da0f06188c06df74fc1f3e4b&')
             .setDescription('Aşağıdaki komutları kullanarak kayıt sistemini yönetebilirsiniz:')
             .addFields(
                 pageCommands.map(cmd => ({

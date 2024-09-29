@@ -4,6 +4,10 @@ Bu proje, Discord.js v14 kullanılarak oluşturulmuş gelişmiş bir kayıt botu
 
 (NOT : bu bot @sadecemsi tarafından yazıldı, @parsherr tarafından geliştirildi)
 
+### Eklenecekler :
+
+- 3 aşamalı ve rollü uyarı sistemi
+
 ## Özellikler
 
 - Discord.js v14 ile geliştirilmiş
